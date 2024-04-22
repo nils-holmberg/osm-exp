@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>study title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- randomize experimental condition -->
+<script>
+var x = Math.random(); 
+//var cnum = 6;
+var cnum = 3;
+var cond = "x";
+for (let i=0; i<cnum; i++) {
+if (x >= i/cnum && x < (i+1)/cnum) { 
+var cond = String.fromCharCode(97 + i);
+}}
+//document.write(cond);
+//console.log(cond);
+
+var cond_url = "https://nils-holmberg.github.io/scom-expm/web/tjs/cond-"+cond+".html";
+//var cond_url = "cond-"+cond+".html";
+
+// Dynamically construct the cond_url
+var currentUrl = window.location.href;
+var hostname = new URL(currentUrl).hostname;
+var firstDirectory = currentUrl.split("/")[3]; // Assuming the first directory is at index 3
+var cond_url = "https://" + hostname + "/" + firstDirectory + "/web/tjs/cond-" + cond + ".html";
+
+var cond_onc = "location.href='"+cond_url+"';";
+</script>
+
+</head>
+
+<body>
+<div class="container-fluid p-5 bg-primary text-white text-left">
+<h1>welcome to the study</h1>
+<p>some info to participants..</p> 
+</div>
+
+<div class="container mt-5">
+<div class="row">
+<div class="col-sm-4">
+<h3>condition is.. <span id="cond"></span></h3>
+<div style="margin:100px;"></div>
+<a id="exp_a" href="" class="btn btn-primary">start survey</a>
+<div style="margin:100px;"></div>
+<!--
+<input id="exp_b" type="button" onclick="" value="start experiment" />
+-->
+</div>
+<div class="col-sm-4">
+</div>
+<div class="col-sm-4">
+</div>
+</div>
+</div>
+
+<script>
+document.getElementById("cond").innerHTML = cond;
+document.getElementById("exp_a").setAttribute("href", cond_url);
+document.getElementById("exp_b").setAttribute("onclick", cond_onc);
+</script>
+</body>
+
+
+</html>
+
+
+
+
+
+
