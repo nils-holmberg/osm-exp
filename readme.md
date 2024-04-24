@@ -1,6 +1,6 @@
 # open science methods, experiments
 
-## web analytics experiments
+## website analytics 
 
 - [google analytics](https://nils-holmberg.github.io/osm-exp/web/landing-page/)
 
