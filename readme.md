@@ -6,6 +6,7 @@
 
 ## survey experiments
 
+- [pyscript ab test](https://nils-holmberg.github.io/osm-exp/web/pyscript/)
 - [google forms](https://nils-holmberg.github.io/osm-exp/web/tjs/)
 - [python streamlit](https://osm-exp.streamlit.app/)
 - data collection 
