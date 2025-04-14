@@ -1,5 +1,9 @@
 # open science methods, experiments
 
+## course workshop
+
+- [inoculation experiment](https://nils-holmberg.github.io/osm-exp/web/survey/)
+
 ## website analytics 
 
 - [google analytics](https://nils-holmberg.github.io/osm-exp/web/landing-page/)
